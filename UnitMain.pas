@@ -49,7 +49,7 @@ begin
         FrmMessageBox.ShowModal;
         exit;
       end;
-      Self.idtcpclntTest.Connect(2000);
+      Self.idtcpclntTest.Connect;
       FrmMessageBox.lblMessage.Caption := 'OK';
       FrmMessageBox.ShowModal;
       idtcpclntTest.Disconnect;

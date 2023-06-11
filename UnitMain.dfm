@@ -1,11 +1,11 @@
 object Form1: TForm1
   Left = 206
   Top = 189
-  Width = 300
-  Height = 127
   ActiveControl = edtIp
   BorderIcons = [biSystemMenu]
   Caption = 'Service Status Check'
+  ClientHeight = 89
+  ClientWidth = 283
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -184,10 +184,8 @@ object Form1: TForm1
     0000FC3F0000F00F0000E0070000C00300000000000000000000000000000000
     000080010000C0030000C0030000E0070000FFFF0000}
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnKeyDown = FormKeyDown
-  PixelsPerInch = 96
   TextHeight = 13
   object lblIP: TLabel
     Left = 16
@@ -227,8 +225,9 @@ object Form1: TForm1
     TabOrder = 1
   end
   object idtcpclntTest: TIdTCPClient
-    MaxLineAction = maException
+    ConnectTimeout = 2000
     Port = 0
+    ReadTimeout = -1
     Left = 24
     Top = 56
   end
